@@ -1,0 +1,116 @@
+.container{
+    min-width: 500px;
+    max-width: 600px;
+    margin-top: -100px;
+    overflow: hidden;
+}
+
+header{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    margin-bottom: 30px;
+}
+
+.header__title{
+    margin: 0;
+    letter-spacing: 8px;
+    color: var(--Light-Grayish-Blue);
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.header__theme-switch{
+    width: 20px;
+}
+
+.header-input-container{
+    width: 100%;
+    background: var(--Very-Dark-Desaturated-Blue);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 10px 30px var(--Very-Dark-Desaturated-Blue);
+    display: flex;
+    align-items: center;
+}
+
+.header__check{
+    margin-right: 20px;
+    position: relative;
+    appearance: none;
+}
+
+.header__check::before{
+    content: " ";
+    top: -11px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 100%;
+    border: 1px solid var(--Dark-Grayish-Blue);
+}
+
+.header__check:checked::before{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: '✓';
+    color: var(--Light-Grayish-Blue);
+    background: rgb(91,172,247);
+    background: linear-gradient(150deg, rgba(91,172,247,1) 0%, rgba(152,96,241,1) 100%);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.header__input-task{
+    margin-left: 20px;
+    background: none;
+    border: none;
+    outline: none;
+    color:var(--Light-Grayish-Blue);
+    width: 100%;
+}
+
+.tasks-container{
+    background: var(--Very-Dark-Desaturated-Blue);
+    border-bottom: 1px solid var(--Very-Dark-Grayish-Blue);
+    min-height: 300px;
+    border-radius: 5px 5px 0 0;
+
+}
+
+footer{
+    padding: 25px 20px;
+    width: 100%;
+    background: var(--Very-Dark-Desaturated-Blue);
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--Very-Dark-Grayish-Blue);
+    font-weight: 700;
+
+    & span, .items-clear p{
+        cursor: pointer;
+        transition: all .3s ease;
+        
+        &:hover{
+            color: var(--Light-Grayish-Blue);
+        }
+    }
+}
+
+.items-filter__active{
+    margin: 0px 15px;
+}
+
+.items-filter--active{
+    color: var(--Bright-Blue); 
+}
+
